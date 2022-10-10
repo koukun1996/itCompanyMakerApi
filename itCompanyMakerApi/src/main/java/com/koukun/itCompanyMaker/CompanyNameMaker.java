@@ -25,7 +25,7 @@ public class CompanyNameMaker {
 	 * @return result 作成した会社名
 	 */
 	private String makeCompany(String companyName) {
-		String[] firstParts = {"グローバル", "イノベーション", "インフォメーション", "デザイン"};
+		String[] firstParts = {"グローバル", "イノベーション", "インフォメーション", "デザイン", "エンジニアリング"};
 		String[] secondParts = {"システム", "ソリューション", "サービス", "ジャパン", "テクノロジー", "ソフトウェア"};
 		StringBuilder result = new StringBuilder();
 		result.append(companyName)
@@ -40,6 +40,6 @@ public class CompanyNameMaker {
 	 * @return 受け取った配列のランダムなインデックス
 	 */
 	private static int randomIndexNum(String[] strArray) {
-		return (int)(Math.random() * strArray.length -1); 
+		return (int)(Math.random() * strArray.length); 
 	}
 }

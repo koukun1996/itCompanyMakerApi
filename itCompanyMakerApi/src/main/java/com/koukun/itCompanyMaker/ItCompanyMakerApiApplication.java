@@ -18,14 +18,4 @@ public class ItCompanyMakerApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ItCompanyMakerApiApplication.class, args);
 	}
-	
-	@GetMapping("/hello")
-	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return String.format("Hello %s!", name);
-	}
-	
-	@GetMapping("/getCompanyName")
-	public CompanyNameMaker getCompanyName(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return new CompanyNameMaker(counter.incrementAndGet(), String.format(template, name));
-	}
 }
